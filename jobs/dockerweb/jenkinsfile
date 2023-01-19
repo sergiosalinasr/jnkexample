@@ -19,6 +19,7 @@ pipeline {
                   echo "name_final: %name_final%"
                   echo "USER = %USER%"
                   rem echo %cd%
+                  docker version
                   rem docker ps | echo
                 '''
               }
