@@ -17,12 +17,9 @@ pipeline {
               script{
              bat '''
                   dir
-                  echo ${name_final}
-                  echo "${name_final}"
-                  echo '${name_final}'
                   echo %name_final%
-                  echo '%name_final%'
-                  echo "%name_final%"
+                  echo 'name_final: %name_final%'
+                  echo "name_final: %name_final%"
                   rem docker ps | echo
                 '''
               }
