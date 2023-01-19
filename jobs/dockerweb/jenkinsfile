@@ -8,7 +8,7 @@ pipeline {
         string(name: 'puerto_imagen', defaultValue: '8080', description: 'puerto a publicar')
     }
     environment {
-        name_final = "${name_container}${tag_imagen}${puerto_imagen}"        
+        name_final = "C${name_container}T${tag_imagen}P${puerto_imagen}"        
     }
     stages {
           stage('info'){
@@ -16,10 +16,8 @@ pipeline {
                 echo "name_final = ${name_final}"
               script{
              bat '''
-                  dir
-                  echo %name_final%
-                  echo 'name_final: %name_final%'
                   echo "name_final: %name_final%"
+                  rem echo %cd%
                   rem docker ps | echo
                 '''
               }
