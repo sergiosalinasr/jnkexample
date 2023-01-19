@@ -15,11 +15,8 @@ pipeline {
             steps {
               script{
              bat '''
-//                  pwd
-                  echo ${USER}
+                  echo "$USER"
                   docker ps | echo
-//                  whoami
-//                  groups ${USER}
                 '''
               }
             }
