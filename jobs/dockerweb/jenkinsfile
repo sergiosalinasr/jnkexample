@@ -17,10 +17,8 @@ pipeline {
               script{
              bat '''
                   echo "name_final: %name_final%"
-                  echo "USER = %USER%"
                   rem echo %cd%
-                  docker version
-                  rem docker ps | echo
+                  docker ps
                 '''
               }
             }
@@ -29,7 +27,7 @@ pipeline {
 
             when {
                 expression { 
-                    DOCKER_EXIST = sh(returnStdout: true, script: 'echo "$(docker ps -q --filter name=${name_final})"').trim()
+                    DOCKER_EXIST = bat(returnStdout: true, script: 'echo "$(docker ps -q --filter name=${name_final})"').trim()
                     return  DOCKER_EXIST != '' 
                 }
             }
