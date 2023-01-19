@@ -14,12 +14,12 @@ pipeline {
           stage('info'){
             steps {
               script{
-                sh '''
-                  pwd
+             bat '''
+//                  pwd
                   echo ${USER}
                   docker ps | echo
-                  whoami
-                  groups ${USER}
+//                  whoami
+//                  groups ${USER}
                 '''
               }
             }
