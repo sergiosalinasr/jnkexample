@@ -13,9 +13,10 @@ pipeline {
     stages {
           stage('info'){
             steps {
+                echo "name_final = ${name_final}"
               script{
              bat '''
-                  echo "%USER"
+                  echo %USER%
                   docker ps | echo
                 '''
               }
