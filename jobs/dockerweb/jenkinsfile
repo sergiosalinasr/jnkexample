@@ -20,7 +20,10 @@ pipeline {
                   echo ${name_final}
                   echo "${name_final}"
                   echo '${name_final}'
-                  docker ps | echo
+                  echo %name_final%
+                  echo '%name_final%'
+                  echo "%name_final%"
+                  rem docker ps | echo
                 '''
               }
             }
