@@ -26,7 +26,7 @@ pipeline {
           stage ('1. set comutername to var') {
             steps {
                 script {
-                    stdout = bat(returnStdout:true , script: docker ps -q --filter name=charming_allen).trim()
+                    stdout = bat(returnStdout:true , script: "docker ps -q --filter name=charming_allen").trim()
                     result = stdout.readLines().drop(1).join(" ")       
                     
                 }
