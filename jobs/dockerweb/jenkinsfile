@@ -37,20 +37,15 @@ pipeline {
 
             when {
                 expression { 
-                    DOCKER_EXIST = bat(script: "docker ps -q --filter name=charming_allen", returnStdout: true).trim().readLines().drop(1).join(" ")
-                    script{
-                        bat '''
-
-                            echo "DOCKER_EXIST--: %DOCKER_EXIST%"
-                            '''
-                        }
+                    stdout = bat(returnStdout:true , script: "docker ps -q --filter name=charming_allen").trim()
+                    DOCKER_EXIST = stdout.readLines().drop(1).join(" ")
                     return  DOCKER_EXIST != '' 
                 }
             }
             steps {
                 script{
-                    sh ''' 
-                         docker stop ${name_final}
+                    bat '''
+                        echo "docker stop %DOCKER_EXIST%"
                     '''
                     }
                     
