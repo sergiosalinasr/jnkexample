@@ -27,7 +27,8 @@ pipeline {
 
             when {
                 expression { 
-                    DOCKER_EXIST = bat(script: "echo %name_final%", returnStdout: true).trim()
+          //          DOCKER_EXIST = bat(script: "echo %name_final%", returnStdout: true).trim()
+                    DOCKER_EXIST = "XXXXXX"
                     script{
                         bat '''
                             echo "DOCKER_EXIST--: %DOCKER_EXIST%"
