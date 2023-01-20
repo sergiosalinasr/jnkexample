@@ -26,7 +26,7 @@ pipeline {
           stage ('1. set comutername to var') {
             steps {
                 script {
-                    winCompName = bat(script: "docker ps -q --filter name=charming_allen", returnStdout: true).trim()
+                    winCompName = bat(script: 'echo "@(docker ps -q --filter name=charming_allen)"', returnStdout: true).trim()
                 }
                 echo "winCompName = ${winCompName}"
             }       
