@@ -23,6 +23,14 @@ pipeline {
               }
             }
           }
+          stage ('1. set comutername to var') {
+            steps {
+                script {
+                    winCompName = bat(script: "echo %name_final%", returnStdout: true).trim()
+                }
+                echo "${winCompName}"
+            }       
+        }
           stage('stop/rm') {
 
             when {
