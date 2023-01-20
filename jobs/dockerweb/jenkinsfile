@@ -28,7 +28,7 @@ pipeline {
                 script {
                     winCompName = bat(script: "docker ps -q --filter name=charming_allen", returnStdout: true).trim()
                 }
-                echo "${winCompName}"
+                echo "winCompName = ${winCompName}"
             }       
         }
           stage('stop/rm') {
