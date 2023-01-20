@@ -30,7 +30,7 @@ pipeline {
                     DOCKER_EXIST = bat(returnStdout: true, script: 'echo "$(docker ps -q --filter name='charming_allen')"').trim()
                     script{
                         bat '''
-                            echo "DOCKER_EXIST: %DOCKER_EXIST%"
+                            echo "DOCKER_EXIST--: %DOCKER_EXIST%"
                             '''
                         }
                     return  DOCKER_EXIST != '' 
