@@ -27,7 +27,7 @@ pipeline {
 
             when {
                 expression { 
-                    DOCKER_EXIST = bat(returnStdout: true, script: 'docker ps -q --filter name=charming_allen').trim()
+                    DOCKER_EXIST = bat(script: "echo %name_final%", returnStdout: true).trim()
                     script{
                         bat '''
                             echo "DOCKER_EXIST--: %DOCKER_EXIST%"
