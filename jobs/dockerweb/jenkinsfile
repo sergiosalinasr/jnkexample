@@ -18,7 +18,7 @@ pipeline {
              bat '''
                   echo "name_final: %name_final%"
                   rem echo %cd%
-                  docker ps
+                  docker ps -q --filter name=charming_allen
                 '''
               }
             }
