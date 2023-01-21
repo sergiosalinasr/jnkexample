@@ -39,6 +39,7 @@ pipeline {
                 expression { 
                     stdout = bat(returnStdout:true , script: "docker ps -q --filter name=charming_allen").trim()
                     DOCKER_EXIST = stdout.readLines().drop(1).join(" ")
+                    echo "DOCKER_EXIST = ${DOCKER_EXIST}"
                     return  DOCKER_EXIST != '' 
                 }
             }
