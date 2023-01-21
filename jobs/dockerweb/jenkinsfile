@@ -42,10 +42,7 @@ pipeline {
                     echo "DOCKER_EXIST = ${DOCKER_EXIST}"
                     if (DOCKER_EXIST != '') {
                         script{
-                            bat '''
-                            echo "Deteniendo %DOCKER_EXIST%"
-                            docker stop %DOCKER_EXIST%
-                        '''
+                            bat(returnStdout:true , script: "docker stop %DOCKER_EXIST%")
                         }
                     }
                     return  DOCKER_EXIST != '' 
