@@ -41,9 +41,12 @@ pipeline {
                     DOCKER_EXIST = stdout.readLines().drop(1).join(" ")
                     echo "DOCKER_EXIST = ${DOCKER_EXIST}"
                     if (DOCKER_EXIST != '') {
-                        echo 'if existe docker STOP...'
-                    } else {
-                        echo 'if not existe NADA...'
+                        script{
+                            bat '''
+                            echo "Deteniendo %DOCKER_EXIST%"
+                            docker stop %DOCKER_EXIST%
+                        '''
+                        }
                     }
                     return  DOCKER_EXIST != '' 
                 }
