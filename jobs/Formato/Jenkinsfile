@@ -9,9 +9,21 @@ pipeline {
     appName = "variable" 
   }
   stages {
-
- stage("paso 1"){
-     
+    stage("Pruebas funcionales API "){ 
+      steps {
+          script {			
+           bat "echo 'hola mundo'"
+        }
+      }
+    }
+    stage("Pruebas CdA de QA"){ 
+      steps {
+          script {			
+           bat "echo 'hola mundo'"
+        }
+      }
+    }
+    stage("Pruebas CdA de Seguridad"){ 
       steps {
           script {			
            bat "echo 'hola mundo'"
