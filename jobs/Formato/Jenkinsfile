@@ -12,21 +12,21 @@ pipeline {
     stage("Stage: Pruebas funcionales API "){ 
       steps {
           script {			
-           bat "echo 'hola mundo'"
+           echo "Tareas: Pruebas funcionales API "
         }
       }
     }
     stage("Stage: Pruebas CdA de QA"){ 
       steps {
           script {			
-           bat "echo 'hola mundo'"
+           echo "Tareas: Pruebas CdA de QA"
         }
       }
     }
     stage("Stage: Pruebas CdA de Seguridad"){ 
       steps {
           script {			
-           bat "echo 'hola mundo'"
+           echo "Tareas: Pruebas CdA de Seguridad"
         }
       }
     }
