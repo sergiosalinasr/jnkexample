@@ -9,24 +9,38 @@ pipeline {
     appName = "variable" 
   }
   stages {
-    stage("Stage: Pruebas funcionales API "){ 
+    stage("Stage: Inspección de código Sonarqube"){ 
       steps {
           script {			
-           echo "Tareas: Pruebas funcionales API "
+           echo "Tareas: Inspección de código Sonarqube "
         }
       }
     }
-    stage("Stage: Pruebas CdA de QA"){ 
+    stage("Stage: Pruebas unitarias"){ 
       steps {
           script {			
-           echo "Tareas: Pruebas CdA de QA"
+           echo "Tareas: Pruebas unitarias"
         }
       }
     }
-    stage("Stage: Pruebas CdA de Seguridad"){ 
+    stage("Stage: Construcción y despliegue amb. Pruebas"){ 
       steps {
           script {			
-           echo "Tareas: Pruebas CdA de Seguridad"
+           echo "Tareas: Construcción y despliegue amb. Pruebas"
+        }
+      }
+    }
+    stage("Stage: Pruebas de API (Postman/Newman)"){ 
+      steps {
+          script {			
+           echo "Tareas: Pruebas de API (Postman/Newman)"
+        }
+      }
+    }
+    stage("Stage: Pruebas de Funcionales (Selenium)"){ 
+      steps {
+          script {			
+           echo "Tareas: Pruebas de Funcionales (Selenium)"
         }
       }
     }
