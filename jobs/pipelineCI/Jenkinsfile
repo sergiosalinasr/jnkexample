@@ -44,6 +44,13 @@ pipeline {
         }
       }
     }
+    stage("Stage: del programador ss1"){ 
+      steps {
+          script {			
+           echo "Tareas: del programador ss1"
+        }
+      }
+    }
   }
   post {
       always {          
