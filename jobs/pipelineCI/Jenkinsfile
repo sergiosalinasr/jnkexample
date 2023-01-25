@@ -48,6 +48,7 @@ pipeline {
       steps {
           script {			
            echo "Tareas: del programador ss1"
+           echo "Tareas/Step 2: del programador ss2"
         }
       }
     }
