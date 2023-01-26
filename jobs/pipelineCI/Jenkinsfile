@@ -49,7 +49,7 @@ pipeline {
           script {			
            echo "Tareas: del programador ss1"
            echo "Tareas/Step 2: del programador ss2"
-           echo "Tareas/Step 3: master modifica la MISMA linea otra vez master 2"
+           echo "Tareas/Step 3: master modifica la MISMA linea otra vez master"
         }
       }
     }
