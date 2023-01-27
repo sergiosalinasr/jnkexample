@@ -9,47 +9,10 @@ pipeline {
     appName = "variable" 
   }
   stages {
-    stage("Stage: Inspección de código Sonarqube"){ 
+    stage("Stage: Pruebas de carga con JMeter"){ 
       steps {
           script {			
-           echo "Tareas: Inspección de código Sonarqube "
-        }
-      }
-    }
-    stage("Stage: Pruebas unitarias"){ 
-      steps {
-          script {			
-           echo "Tareas: Pruebas unitarias"
-        }
-      }
-    }
-    stage("Stage: Construcción y despliegue amb. Pruebas"){ 
-      steps {
-          script {			
-           echo "Tareas: Construcción y despliegue amb. Pruebas"
-        }
-      }
-    }
-    stage("Stage: Pruebas de API (Postman/Newman)"){ 
-      steps {
-          script {			
-           echo "Tareas: Pruebas de API (Postman/Newman)"
-        }
-      }
-    }
-    stage("Stage: Pruebas de Funcionales (Selenium)"){ 
-      steps {
-          script {			
-           echo "Tareas: Pruebas de Funcionales (Selenium)"
-        }
-      }
-    }
-    stage("Stage: del programador ss1"){ 
-      steps {
-          script {			
-           echo "Tareas: del programador ss1"
-           echo "Tareas/Step 2: del programador ss2"
-           echo "Cambio del programador ss1, ahora agrego mis cambios ss2-1014"
+           echo "Tareas: Pruebas de carga con JMeter"
         }
       }
     }
