@@ -50,6 +50,7 @@ pipeline {
            echo "Tareas: del programador ss1"
            echo "Tareas/Step 2: del programador ss2"
            echo "Cambio del programador ss2, en el ticket ss2-1014 antiguo"
+           echo "Cambio del programador ss1, ahora agrego mis cambios ss2-1017"
         }
       }
     }
