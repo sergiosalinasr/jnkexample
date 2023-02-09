@@ -40,7 +40,7 @@ pipeline {
     stage("Stage: Pruebas de Funcionales (Selenium)"){ 
       steps {
           script {			
-           echo "Tareas: Pruebas de Funcionales (Selenium)"
+           echos "Tareas: Pruebas de Funcionales (Selenium)"
         }
       }
     }
