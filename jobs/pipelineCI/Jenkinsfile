@@ -9,10 +9,10 @@ pipeline {
     appName = "variable" 
   }
   stages {
-    stage("Stage: Inspección de código Sonarqube"){ 
+    stage("Stage: Inspección de codigo Sonarqube"){ 
       steps {
           script {			
-           echo "Tareas: Inspección de código Sonarqube "
+           echo "Tareas: Inspección de codigo Sonarqube "
         }
       }
     }
@@ -23,10 +23,10 @@ pipeline {
         }
       }
     }
-    stage("Stage: Construcción y despliegue amb. Pruebas"){ 
+    stage("Stage: Construccion y despliegue amb. Pruebas"){ 
       steps {
           script {			
-           echo "Tareas: Construcción y despliegue amb. Pruebas"
+           echo "Tareas: Construccion y despliegue amb. Pruebas"
         }
       }
     }
@@ -57,14 +57,14 @@ pipeline {
   post {
       always {          
 //          deleteDir()
-           bat "echo 'fase always'"
+           bat "echo 'fase always: este mensaje va SIEMPRE'"
       }
       success {
-            bat "echo 'fase success'"
+            bat "echo 'fase success: este mensaje va si el stage pasa bien'"
         }
 
       failure {
-            bat "echo 'fase failure'"
+            bat "echo 'fase failure: este mensaje va si termina mal'"
       }
       
   }
