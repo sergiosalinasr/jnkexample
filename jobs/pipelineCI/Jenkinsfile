@@ -65,6 +65,7 @@ pipeline {
 
       failure {
             bat "echo 'fase failure: este mensaje va si termina mal'"
+            bat "echo 'JOB_NAME: ${env.JOB_NAME}, NODE_NAME: ${env.NODE_NAME}'"
       }
       
   }
